@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About MayaBust</title>
+
+  <!-- Tailwind for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+     /* background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); */
+      background: url('images/bf.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background: transparent;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+      max-width: 2000px;
+      padding: 0 50px;
+      margin: 0 auto;
+    }
+
+    #navbar__logo {
+      background-color: #074411;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    .navbar__menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar__links, .button {
+      color: #665e5e;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar__links:hover {
+      color: #f77062;
+    }
+
+    .button {
+      background: #176d17;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background: #33d05b;
+    }
+
+    .about-container {
+      max-width: 860px;
+      margin: 100px auto 40px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 15px 30px rgba(0, 100, 0, 0.1);
+      overflow: hidden;
+      padding: 40px;
+      border: 1px solid #e5f0e5;
+    }
+
+    .about-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #176d17;
+      margin-bottom: 20px;
+    }
+
+    .about-container p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .about-container ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-container li {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .about-container li::before {
+      content: "🌾";
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" id="navbar__logo"><i class="fa-solid fa-crow"></i>mayabust</a>
+      <ul class="navbar__menu">
+        <li><a href="index.html" class="navbar__links">Home</a></li>
+        <!-- <li><a href="tech.html" class="navbar__links">Tech</a></li> -->
+        <li><a href="about.html" class="navbar__links">About</a></li>
+        <li><a href="login.html" class="button">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About MayaBust Content -->
+  <div class="about-container">
+    <h1 class="about-title">About MayaBust</h1>
+    <p>
+      MayaBust is a student-led project dedicated to helping rice farmers protect their crops from daily bird attacks, especially from Maya birds (<i>Lonchura spp.</i>). The system is built using smart and accessible technology, combining Artificial Intelligence (AI) and the Internet of Things (IoT) to detect birds in real time and automatically trigger deterrents like sound and movement to scare them away. No constant monitoring or manual shouting needed.
+    </p>
+    <p>
+      This idea came from our observations and interviews with local farmers in Jimenez, Misamis Occidental, where bird infestations are a common and serious problem during the grain-filling and ripening stages of rice. Farmers often rely on traditional methods like scarecrows, plastic strips, or noise-makers, but birds eventually get used to them. Many of the farmers we spoke to have suffered significant losses, with some reporting up to 90% damage in a single season.
+    </p>
+    <p>
+      We wanted to offer something better. So, we created a prototype that uses a small camera attached to a Raspberry Pi to watch the field and detect incoming birds. Once a bird is detected, the Raspberry Pi sends a signal to an ESP32 device, which then activates a sound or motion deterrent to drive the birds away quickly and effectively.
+    </p>
+    <p>Our goal is simple and close to heart:</p>
+    <ul>
+      <li>Help farmers keep more of their harvest</li>
+      <li>Reduce crop losses caused by birds</li>
+      <li>Bring useful, low-cost technology to rural areas</li>
+    </ul>
+    <p> 
+        <p>
+      As we continue developing MayaBust, we’re excited about its potential to make life a little easier for hardworking farmers. We believe that with the right tools, even the oldest problems in agriculture can be solved in smarter, more sustainable ways.
+    </p>
+    </p>
+  </div>
+</body>
+</html>
